@@ -1,29 +1,44 @@
-import { defineConfig } from 'vitepress'
+import {defineConfig} from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Gildsmith",
-  description: "User Guide",
-  base: "/userguide/",
-  themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+    title: 'Gildsmith • User Guide',
+    description: 'User Guide',
+    base: '/userguide/',
+    head: [
+        ['link', {rel: 'icon', href: '/userguide/favicon.ico'}],
     ],
+    themeConfig: {
+        logo: '/logo.svg',
 
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+        editLink: {
+            pattern: 'https://github.com/gildsmith/userguide/edit/master/:path',
+            text: 'Edit this page on GitHub',
+        },
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
+        search: {
+            provider: 'local',
+        },
+
+        outline: {
+            level: 'deep',
+        },
+
+        nav: [
+            {text: 'Dev Docs', link: 'https://gildsmith.github.io/userguide/'},
+        ],
+
+        sidebar: [
+            {
+                text: 'Getting Started',
+                items: [
+                    {text: 'Quick Start', link: '/'},
+                    {text: 'Changelog', link: '/changelog'},
+                ],
+            },
+        ],
+
+        socialLinks: [
+            {icon: 'github', link: 'https://github.com/gildsmith/gildsmith'},
+        ],
+    },
 })
