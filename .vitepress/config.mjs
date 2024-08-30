@@ -24,14 +24,14 @@ export default defineConfig({
         },
 
         nav: [
-            {text: 'Dev Docs', link: 'https://gildsmith.github.io/userguide/'},
+            {text: 'Dev Docs', link: 'https://gildsmith.github.io/devdocs/'},
         ],
 
         sidebar: [
             {
                 text: 'Getting Started',
                 items: [
-                    {text: 'Quick Start', link: '/'},
+                    {text: '❌ Quick Start', link: '/'},
                     {text: 'Changelog', link: '/changelog'},
                 ],
             },
